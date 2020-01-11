@@ -14,7 +14,9 @@ const { BotFrameworkAdapter, ConversationState, InputHints, MemoryStorage, UserS
 const { FlightBookingRecognizer } = require('./dialogs/flightBookingRecognizer');
 
 // This bot's main dialog.
-const { DialogAndWelcomeBot } = require('./bots/dialogAndWelcomeBot');
+const { DialogBot } = require('./bots/dialogBot');
+// When moving to a welcome bot, uncomment below.
+// const { DialogAndWelcomeBot } = require('./bots/dialogAndWelcomeBot');
 const { MainDialog } = require('./dialogs/mainDialog');
 
 // the bot's booking dialog
@@ -75,7 +77,7 @@ const luisRecognizer = new FlightBookingRecognizer(luisConfig);
 // Create the main dialog.
 const bookingDialog = new BookingDialog(BOOKING_DIALOG);
 const dialog = new MainDialog(luisRecognizer, bookingDialog);
-const bot = new DialogAndWelcomeBot(conversationState, userState, dialog);
+const bot = new DialogBot(conversationState, userState, dialog);
 
 // Create HTTP server
 const server = restify.createServer();
