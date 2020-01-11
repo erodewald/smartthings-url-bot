@@ -7,6 +7,8 @@
 const path = require('path');
 const restify = require('restify');
 
+const { ApplicationInsightsTelemetryClient, ApplicationInsightsWebserverMiddleware } = require('botbuilder-applicationinsights');
+
 // Import required bot services.
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
 const { BotFrameworkAdapter, ConversationState, InputHints, MemoryStorage, UserState } = require('botbuilder');
@@ -68,19 +70,23 @@ const memoryStorage = new MemoryStorage();
 const conversationState = new ConversationState(memoryStorage);
 const userState = new UserState(memoryStorage);
 
+
 // If configured, pass in the FlightBookingRecognizer.  (Defining it externally allows it to be mocked for tests)
-const { LuisAppId, LuisAPIKey, LuisAPIHostName } = process.env;
+const { LuisAppId, LuisAPIKey, LuisAPIHostName, ApplicationInsightsInstrumentationKey } = process.env;
 const luisConfig = { applicationId: LuisAppId, endpointKey: LuisAPIKey, endpoint: `https://${ LuisAPIHostName }` };
 
 const luisRecognizer = new FlightBookingRecognizer(luisConfig);
 
+const appInsightsClient = new ApplicationInsightsTelemetryClient(ApplicationInsightsInstrumentationKey);
+
 // Create the main dialog.
-const bookingDialog = new BookingDialog(BOOKING_DIALOG);
-const dialog = new MainDialog(luisRecognizer, bookingDialog);
+const bookingDialog = new BookingDialog(BOOKING_DIALOG, appInsightsClient);
+const dialog = new MainDialog(luisRecognizer, bookingDialog, appInsightsClient);
 const bot = new DialogBot(conversationState, userState, dialog);
 
 // Create HTTP server
 const server = restify.createServer();
+server.use(ApplicationInsightsWebserverMiddleware);
 server.listen(process.env.port || process.env.PORT || 3978, function() {
     console.log(`\n${ server.name } listening to ${ server.url }`);
     console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');

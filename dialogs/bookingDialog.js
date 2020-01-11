@@ -13,8 +13,11 @@ const TEXT_PROMPT = 'textPrompt';
 const WATERFALL_DIALOG = 'waterfallDialog';
 
 class BookingDialog extends CancelAndHelpDialog {
-    constructor(id) {
+    constructor(id, insightsClient) {
         super(id || 'bookingDialog');
+
+        // Add ApplicationInsights as telemetry client
+        this.telemetryClient = insightsClient;
 
         this.addDialog(new TextPrompt(TEXT_PROMPT))
             .addDialog(new ConfirmPrompt(CONFIRM_PROMPT))
