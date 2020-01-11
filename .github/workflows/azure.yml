@@ -24,6 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v1
       with:
@@ -33,9 +36,12 @@ jobs:
         npm install
         npm run build --if-present
         npm run test --if-present
-    - name: 'Deploy to Azure'
-      uses: azure/webapps-deploy@v1
+    # deploy web app using Azure credentials
+    - uses: azure/webapps-deploy@v1
       with:
-        app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        app-name: 'smartthings-url'
+
+    # Azure logout 
+    - name: logout
+      run: |
+        az logout
