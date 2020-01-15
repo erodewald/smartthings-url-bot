@@ -1,0 +1,5 @@
+@apiHost=https://api.smartthings.com
+@token=INTENTIONALLY-INVALID-TOKEN
+
+GET {{apiHost}}/devices
+Authorization: Bearer {{token}}

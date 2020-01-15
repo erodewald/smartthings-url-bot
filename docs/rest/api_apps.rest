@@ -1,0 +1,116 @@
+@appId=mpls-smartthings-url-bot
+@apiHost=https://api.smartthings.com
+
+### list apps
+GET {{apiHost}}/apps
+Authorization: Bearer {{pat}}
+
+### create app
+POST {{apiHost}}/apps
+Authorization: Bearer {{pat}}
+
+{
+  "appName": "{{appId}}",
+  "displayName": "URL Bot",
+  "description": "SmartThings office bot",
+  "appType": "API_ONLY",
+  "classifications": ["CONNECTED_SERVICE"],
+  "oauth": {
+    "clientName": "smartthings-url-bot-client",
+    "scope": [
+        "r:locations:*",
+        "w:locations:*",
+        "r:devices:*",
+        "x:devices:*",
+        "w:schedules", 
+        "r:schedules",
+        "r:hubs:*",
+        "r:security:locations:*:armstate",
+        "r:scenes:*",
+        "x:scenes:*"
+    ],
+    "redirectUris": ["https://token.botframework.com/.auth/web/redirect"]
+  }
+}
+
+### update app
+PUT {{apiHost}}/apps/{{appId}}
+Authorization: Bearer {{pat}}
+
+{
+  "appName": "{{appId}}",
+  "displayName": "URL Bot",
+  "description": "SmartThings office bot",
+  "appType": "API_ONLY",
+  "classifications": ["CONNECTED_SERVICE"],
+  "oauth": {
+    "clientName": "smartthings-url-bot-client",
+    "scope": [
+        "r:locations:*",
+        "w:locations:*",
+        "r:devices:*",
+        "x:devices:*",
+        "w:schedules", 
+        "r:schedules",
+        "r:hubs:*",
+        "r:security:locations:*:armstate",
+        "r:scenes:*",
+        "x:scenes:*"
+    ],
+    "redirectUris": ["https://token.botframework.com/.auth/web/redirect"]
+  }
+}
+
+### get app
+GET {{apiHost}}/apps/{{appId}}
+Authorization: Bearer {{pat}}
+
+### get app oauth
+GET {{apiHost}}/apps/{{appId}}/oauth
+Authorization: Bearer {{pat}}
+
+### generate app oauth client
+POST {{apiHost}}/apps/{{appId}}/oauth/generate
+Authorization: Bearer {{pat}}
+
+{
+    "clientName": "smartthings-url-bot-client",
+    "scope": [
+        "r:locations:*",
+        "w:locations:*",
+        "r:devices:*",
+        "x:devices:*",
+        "w:schedules", 
+        "r:schedules",
+        "r:hubs:*",
+        "r:security:locations:*:armstate",
+        "r:scenes:*",
+        "x:scenes:*"
+    ],
+    "redirectUris": ["https://token.botframework.com/.auth/web/redirect"]
+  }
+
+### update app oauth
+PUT {{apiHost}}/apps/{{appId}}/oauth
+Authorization: Bearer {{pat}}
+
+{
+    "clientName": "smartthings-url-bot-client",
+    "scope": [
+        "r:locations:*",
+        "w:locations:*",
+        "r:devices:*",
+        "x:devices:*",
+        "w:schedules", 
+        "r:schedules",
+        "r:hubs:*",
+        "r:security:locations:*:armstate",
+        "r:scenes:*",
+        "x:scenes:*"
+    ],
+    "redirectUris": ["https://token.botframework.com/.auth/web/redirect"]
+  }
+
+### delete app
+DELETE {{apiHost}}/apps/{{appId}}
+Authorization: Bearer {{pat}}
