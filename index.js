@@ -13,17 +13,15 @@ const { ApplicationInsightsTelemetryClient, ApplicationInsightsWebserverMiddlewa
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
 const { BotFrameworkAdapter, ConversationState, InputHints, MemoryStorage, UserState } = require('botbuilder');
 
-const { FlightBookingRecognizer } = require('./dialogs/flightBookingRecognizer');
+const { SmartThingsAuthorizeRecognizer } = require('./dialogs/smartThingsAuthorizeRecognizer');
 
 // This bot's main dialog.
 const { DialogBot } = require('./bots/dialogBot');
-// When moving to a welcome bot, uncomment below.
-// const { DialogAndWelcomeBot } = require('./bots/dialogAndWelcomeBot');
 const { MainDialog } = require('./dialogs/mainDialog');
 
-// the bot's booking dialog
-const { BookingDialog } = require('./dialogs/bookingDialog');
-const BOOKING_DIALOG = 'bookingDialog';
+// the bot's dialog
+const { AuthorizeDialog } = require('./dialogs/authorizeDialog');
+const AUTHORIZE_DIALOG = 'authorizeDialog';
 
 // Note: Ensure you have a .env file and include LuisAppId, LuisAPIKey and LuisAPIHostName.
 const ENV_FILE = path.join(__dirname, '.env');
@@ -71,17 +69,17 @@ const conversationState = new ConversationState(memoryStorage);
 const userState = new UserState(memoryStorage);
 
 
-// If configured, pass in the FlightBookingRecognizer.  (Defining it externally allows it to be mocked for tests)
+// If configured, pass in the SmartThingsRecognizer.  (Defining it externally allows it to be mocked for tests)
 const { LuisAppId, LuisAPIKey, LuisAPIHostName, ApplicationInsightsInstrumentationKey } = process.env;
 const luisConfig = { applicationId: LuisAppId, endpointKey: LuisAPIKey, endpoint: `https://${ LuisAPIHostName }` };
 
-const luisRecognizer = new FlightBookingRecognizer(luisConfig);
+const luisRecognizer = new SmartThingsAuthorizeRecognizer(luisConfig);
 
 const appInsightsClient = new ApplicationInsightsTelemetryClient(ApplicationInsightsInstrumentationKey);
 
 // Create the main dialog.
-const bookingDialog = new BookingDialog(BOOKING_DIALOG, appInsightsClient);
-const dialog = new MainDialog(luisRecognizer, bookingDialog, appInsightsClient);
+const authorizeDialog = new AuthorizeDialog(AUTHORIZE_DIALOG, appInsightsClient);
+const dialog = new MainDialog(luisRecognizer, authorizeDialog, appInsightsClient);
 const bot = new DialogBot(conversationState, userState, dialog);
 
 // Create HTTP server
