@@ -1,0 +1,11 @@
+{
+    "rest-client.enableCustomVariableReferencesCodeLens": true,
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "version": "v1"
+        },
+        "production": {
+            "host": "https://api.smartthings.com"
+        }
+    },
+}
