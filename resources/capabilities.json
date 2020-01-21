@@ -1,0 +1,346 @@
+[
+    {
+        "canonicalForm": "statelessTemperatureButton",
+        "list": ["stateless temperature button"]
+    },
+    {
+        "canonicalForm": "tvocMeasurement",
+        "list": ["tvocs", "tvoc", "volatile organic compound"]
+    },
+    {
+        "canonicalForm": "equivalentCarbonDioxideMeasurement",
+        "list": []
+    },
+    {
+        "canonicalForm": "fineDustSensor",
+        "list": ["dust", "dust sensor", "fine dust", "fine dust sensor"]
+    },
+    {
+        "canonicalForm": "thermostatOperatingState",
+        "list": ["thermostate mode", "tstat mode", "tstat state", "thermostat state"]
+    },
+    {
+        "canonicalForm": "tamperAlert",
+        "list": ["tamper", "tamper alert"]
+    },
+    {
+        "canonicalForm": "windowShade",
+        "list": ["window shade", "shade"]
+    },
+    {
+        "canonicalForm": "illuminanceMeasurement",
+        "list": ["illuminance", "light measurement"]
+    },
+    {
+        "canonicalForm": "waterSensor",
+        "list": ["water sensor", "water"]
+    },
+    {
+        "canonicalForm": "ultravioletIndex",
+        "list": ["ultraviolet", "uv", "uvi", "uv index"]
+    },
+    {
+        "canonicalForm": "locationMode",
+        "list": ["location mode", "loc mode"]
+    },
+    {
+        "canonicalForm": "colorTemperature",
+        "list": ["color temp", "color temperature", "kelvin"]
+    },
+    {
+        "canonicalForm": "panicAlarm",
+        "list": ["alarm", "panic alarm", "panic"]
+    },
+    {
+        "canonicalForm": "statelessCustomButton",
+        "list": ["stateless button"]
+    },
+    {
+        "canonicalForm": "audioStream",
+        "list": ["audio stream"]
+    },
+    {
+        "canonicalForm": "presenceSensor",
+        "list": ["presence", "presence sensor"]
+    },
+    {
+        "canonicalForm": "thermostatCoolingSetpoint",
+        "list": ["thermostat cooling setpoint", "cooling setpoint", "tstat cooling setpoint"]
+    },
+    {
+        "canonicalForm": "valve",
+        "list": ["valve"]
+    },
+    {
+        "canonicalForm": "voltageMeasurement",
+        "list": ["voltage", "voltage measurement"]
+    },
+    {
+        "canonicalForm": "notification",
+        "list": ["notification"]
+    },
+    {
+        "canonicalForm": "videoCamera",
+        "list": ["video", "cam", "video cam", "cctv"]
+    },
+    {
+        "canonicalForm": "infraredLevel",
+        "list": ["infrared", "ir"]
+    },
+    {
+        "canonicalForm": "statelessFanspeedButton",
+        "list": ["fanspeed button", "fanspeed"]
+    },
+    {
+        "canonicalForm": "securitySystem",
+        "list": ["security", "security system"]
+    },
+    {
+        "canonicalForm": "signalStrength",
+        "list": ["signal strength", "signal", "snr", "signal noise ratio"]
+    },
+    {
+        "canonicalForm": "fanSpeed",
+        "list": ["fan speed"]
+    },
+    {
+        "canonicalForm": "colorControl",
+        "list": ["color control", "color", "hue"]
+    },
+    {
+        "canonicalForm": "veryFineDustSensor",
+        "list": ["very fine dust sensor", "very fine dust"]
+    },
+    {
+        "canonicalForm": "dustSensor",
+        "list": ["dust sensor"]
+    },
+    {
+        "canonicalForm": "tV",
+        "list": ["tv", "tellie", "tele", "television"]
+    },
+    {
+        "canonicalForm": "switch",
+        "list": ["switch", "rocker", "toggle"]
+    },
+    {
+        "canonicalForm": "lock",
+        "list": ["lock"]
+    },
+    {
+        "canonicalForm": "temperatureMeasurement",
+        "list": ["temp", "temp measurement", "temperature", "temperature measurement"]
+    },
+    {
+        "canonicalForm": "soundPressureLevel",
+        "list": ["decibel", "sound pressure level", "sound pressure", "sound level"]
+    },
+    {
+        "canonicalForm": "videoCapture",
+        "list": ["video cap", "video capture", "capture"]
+    },
+    {
+        "canonicalForm": "remoteControlStatus",
+        "list": ["remote control status"]
+    },
+    {
+        "canonicalForm": "thermostatHeatingSetpoint",
+        "list": ["thermostat heating setpoint", "heating setpoint", "tstat heating setpoint"]
+    },
+    {
+        "canonicalForm": "networkMeter",
+        "list": ["network meter", "net meter", "network i/o", "network io", "net io", "net i/o"]
+    },
+    {
+        "canonicalForm": "switchLevel",
+        "list": ["switch level", "dimmer level", "dimmer"]
+    },
+    {
+        "canonicalForm": "motionSensor",
+        "list": ["motion", "movement", "activity"]
+    },
+    {
+        "canonicalForm": "imageCapture",
+        "list": ["image capture", "image", "screenshot"]
+    },
+    {
+        "canonicalForm": "accelerationSensor",
+        "list": ["gyro", "accel", "accelerometer", "vibration"]
+    },
+    {
+        "canonicalForm": "statelessAudioVolumeButton",
+        "list": ["audio volume button", "volume button", "volume rocker"]
+    },
+    {
+        "canonicalForm": "airQualitySensor",
+        "list": ["air quality"]
+    },
+    {
+        "canonicalForm": "sleepSensor",
+        "list": ["sleep sensor", "sleep activity"]
+    },
+    {
+        "canonicalForm": "refresh",
+        "list": ["refresh"]
+    },
+    {
+        "canonicalForm": "configuration",
+        "list": ["config", "configuration"]
+    },
+    {
+        "canonicalForm": "soundSensor",
+        "list": ["sound", "sound sensor"]
+    },
+    {
+        "canonicalForm": "statelessAudioMuteButton",
+        "list": ["audio mute", "mute", "mute button"]
+    },
+    {
+        "canonicalForm": "carbonDioxideMeasurement",
+        "list": ["carbon dioxide", "co2", "co2 measurement", "carbon dioxide measurement"]
+    },
+    {
+        "canonicalForm": "audioVolume",
+        "list": ["volume", "audio volume"]
+    },
+    {
+        "canonicalForm": "battery",
+        "list": ["battery", "juice"]
+    },
+    {
+        "canonicalForm": "pHMeasurement",
+        "list": ["ph", "acidity", "bitterness", "neutrality", "ph level", "ph value", "alkalinity"]
+    },
+    {
+        "canonicalForm": "button",
+        "list": ["button"]
+    },
+    {
+        "canonicalForm": "audioMute",
+        "list": ["audio mute"]
+    },
+    {
+        "canonicalForm": "contactSensor",
+        "list": ["contact", "door sensor", "window sensor", "contact sensor", "open close", "open close sensor", "open/close"]
+    },
+    {
+        "canonicalForm": "healthCheck",
+        "list": ["health", "health check"]
+    },
+    {
+        "canonicalForm": "refrigeration",
+        "list": ["refrigeration"]
+    },
+    {
+        "canonicalForm": "relativeHumidityMeasurement",
+        "list": ["relative humidity", "humidity"]
+    },
+    {
+        "canonicalForm": "alarm",
+        "list": ["alarm"]
+    },
+    {
+        "canonicalForm": "momentary",
+        "list": ["momentary"]
+    },
+    {
+        "canonicalForm": "objectDetection",
+        "list": ["object detection", "detection"]
+    },
+    {
+        "canonicalForm": "statelessChannelButton",
+        "list": ["channel", "channel button"]
+    },
+    {
+        "canonicalForm": "statelessPowerToggleButton",
+        "list": ["power toggle", "power button", "on off switch", "on off"]
+    },
+    {
+        "canonicalForm": "doorControl",
+        "list": ["door control"]
+    },
+    {
+        "canonicalForm": "energyMeter",
+        "list": ["energy", "energy usage", "energy meter"]
+    },
+    {
+        "canonicalForm": "testCapability",
+        "list": ["test capability"]
+    },
+    {
+        "canonicalForm": "videoStream",
+        "list": ["video stream", "stream"]
+    },
+    {
+        "canonicalForm": "execute",
+        "list": ["execute"]
+    },
+    {
+        "canonicalForm": "temperatureAlarm",
+        "list": ["temp alarm", "temperature alarm"]
+    },
+    {
+        "canonicalForm": "tone",
+        "list": ["tone"]
+    },
+    {
+        "canonicalForm": "samsungTV",
+        "list": ["samsung tv"]
+    },
+    {
+        "canonicalForm": "thermostatFanMode",
+        "list": ["thermostat fan mode", "fan mode", "tstat fan mode"]
+    },
+    {
+        "canonicalForm": "formaldehydeMeasurement",
+        "list": ["formaldehyde measurement", "formaldehyde"]
+    },
+    {
+        "canonicalForm": "filterState",
+        "list": ["filter state", "filter"]
+    },
+    {
+        "canonicalForm": "audioNotification",
+        "list": ["audio notification", "audio notify"]
+    },
+    {
+        "canonicalForm": "carbonMonoxideDetector",
+        "list": ["carbon monoxide detector", "carbon monoxide"]
+    },
+    {
+        "canonicalForm": "thermostatMode",
+        "list": ["thermostat mode", "tstat mode", "a/c mode"]
+    },
+    {
+        "canonicalForm": "powerMeter",
+        "list": ["power meter", "power usage"]
+    },
+    {
+        "canonicalForm": "bypassable",
+        "list": ["bypassable"]
+    },
+    {
+        "canonicalForm": "threeAxis",
+        "list": ["3-axis", "3axis", "three axis", "three-axis", "3dof"]
+    },
+    {
+        "canonicalForm": "smokeDetector",
+        "list": ["smoke detector", "smoke alarm"]
+    },
+    {
+        "canonicalForm": "windowShadePreset",
+        "list": ["window shade preset"]
+    },
+    {
+        "canonicalForm": "statelessPowerButton",
+        "list": ["power button"]
+    },
+    {
+        "canonicalForm": "powerSource",
+        "list": ["power source", "power src"]
+    },
+    {
+        "canonicalForm": "zwMultichannel",
+        "list": ["zwave multichannel"]
+    }
+]

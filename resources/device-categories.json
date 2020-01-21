@@ -1,0 +1,431 @@
+[
+    {
+        "canonicalForm": "AirConditioner",
+        "list": [
+            "oic.d.airconditioner",
+            "air conditioner",
+            "ac",
+            "a/c"
+        ]
+    },
+    {
+        "canonicalForm": "AirPurifier",
+        "list": [
+            "oic.d.airpurifier",
+            "air purifier",
+            "purifier",
+            "air filter"
+        ]
+    },
+    {
+        "canonicalForm": "Blind",
+        "list": [
+            "oic.d.blind",
+            "blind",
+            "blinds",
+            "shades",
+            "shade"
+        ]
+    },
+    {
+        "canonicalForm": "Camera",
+        "list": [
+            "oic.d.camera",
+            "camera",
+            "cam"
+        ]
+    },
+    {
+        "canonicalForm": "Dishwasher",
+        "list": [
+            "oic.d.dishwasher",
+            "dishwasher"
+        ]
+    },
+    {
+        "canonicalForm": "Door",
+        "list": [
+            "oic.d.door",
+            "door"
+        ]
+    },
+    {
+        "canonicalForm": "Dryer",
+        "list": [
+            "oic.d.dryer",
+            "dryer"
+        ]
+    },
+    {
+        "canonicalForm": "Fan",
+        "list": [
+            "oic.d.fan",
+            "fan"
+        ]
+    },
+    {
+        "canonicalForm": "GarageDoor",
+        "list": [
+            "oic.d.garagedoor",
+            "garage door",
+            "garagedoor",
+            "garage"
+        ]
+    },
+    {
+        "canonicalForm": "Light",
+        "list": [
+            "oic.d.light",
+            "light",
+            "lamp",
+            "bulb"
+        ]
+    },
+    {
+        "canonicalForm": "MediaRenderer",
+        "list": [
+            "oic.d.media",
+            "media"
+        ]
+    },
+    {
+        "canonicalForm": "PrinterMultiFunction",
+        "list": [
+            "oic.d.multifunctionprinter",
+            "multifunctionprinter",
+            "printer"
+        ]
+    },
+    {
+        "canonicalForm": "NetworkAudio",
+        "list": [
+            "oic.d.networkaudio",
+            "network audio",
+            "speaker",
+            "audio"
+        ]
+    },
+    {
+        "canonicalForm": "Oven",
+        "list": [
+            "oic.d.oven",
+            "oven",
+            "stove"
+        ]
+    },
+    {
+        "canonicalForm": "Printer",
+        "list": [
+            "oic.d.printer",
+            "printer"
+        ]
+    },
+    {
+        "canonicalForm": "Receiver",
+        "list": [
+            "oic.d.receiver",
+            "receiver"
+        ]
+    },
+    {
+        "canonicalForm": "Refrigerator",
+        "list": [
+            "oic.d.refrigerator",
+            "refrigerator",
+            "fridge"
+        ]
+    },
+    {
+        "canonicalForm": "RobotCleaner",
+        "list": [
+            "oic.d.robotcleaner",
+            "robot cleaner",
+            "robot vac",
+            "vacuum",
+            "robot vacuum"
+        ]
+    },
+    {
+        "canonicalForm": "Scanner",
+        "list": [
+            "oic.d.scanner",
+            "scanner"
+        ]
+    },
+    {
+        "canonicalForm": "SecurityPanel",
+        "list": [
+            "oic.d.securitypanel",
+            "securitypanel",
+            "security panel"
+        ]
+    },
+    {
+        "canonicalForm": "GenericSensor",
+        "list": [
+            "oic.d.sensor",
+            "sensor"
+        ]
+    },
+    {
+        "canonicalForm": "SmartLock",
+        "list": [
+            "oic.d.smartlock",
+            "smartlock",
+            "smart lock",
+            "lock"
+        ]
+    },
+    {
+        "canonicalForm": "SmartPlug",
+        "list": [
+            "oic.d.smartplug",
+            "smartplug",
+            "smart plug",
+            "plug",
+            "outlet"
+        ]
+    },
+    {
+        "canonicalForm": "Switch",
+        "list": [
+            "oic.d.switch",
+            "switch"
+        ]
+    },
+    {
+        "canonicalForm": "Thermostat",
+        "list": [
+            "oic.d.thermostat",
+            "thermostat",
+            "tstat"
+        ]
+    },
+    {
+        "canonicalForm": "Television",
+        "list": [
+            "oic.d.tv",
+            "tv",
+            "television",
+            "tube"
+        ]
+    },
+    {
+        "canonicalForm": "Washer",
+        "list": [
+            "oic.d.washer",
+            "washer"
+        ]
+    },
+    {
+        "canonicalForm": "WaterValve",
+        "list": [
+            "oic.d.watervalve",
+            "watervalve",
+            "water valve",
+            "valve"
+        ]
+    },
+    {
+        "canonicalForm": "WiFiRouter",
+        "list": [
+            "oic.d.wirelessrouter",
+            "router",
+            "wirelessrouter",
+            "wireless router",
+            "wifi",
+            "wifi router",
+            "wi-fi",
+            "wi-fi router"
+        ]
+    },
+    {
+        "canonicalForm": "Other",
+        "list": [
+            "oic.wk.d"
+        ]
+    },
+    {
+        "canonicalForm": "AirQualitySensor",
+        "list": [
+            "x.com.st.d.airqualitysensor",
+            "air quality sensor",
+            "air quality"
+        ]
+    },
+    {
+        "canonicalForm": "BluRayPlayer",
+        "list": [
+            "x.com.st.d.blurayplayer",
+            "bluray",
+            "bluray player",
+            "brd player",
+            "blu ray",
+            "blu ray player",
+            "blu-ray player",
+            "blu-ray"
+        ]
+    },
+    {
+        "canonicalForm": "Bridges",
+        "list": [
+            "x.com.st.d.bridge"
+        ]
+    },
+    {
+        "canonicalForm": "Car",
+        "list": [
+            "x.com.st.d.car", "car", "auto"
+        ]
+    },
+    {
+        "canonicalForm": "Cooktop",
+        "list": [
+            "x.com.st.d.cooktop", "cooktop", "cook top", "range"
+        ]
+    },
+    {
+        "canonicalForm": "DoorBell",
+        "list": [
+            "x.com.st.d.doorbell", "doorbell"
+        ]
+    },
+    {
+        "canonicalForm": "PowerMeter",
+        "list": [
+            "x.com.st.d.energymeter", "power meter", "powermeter", "meter"
+        ]
+    },
+    {
+        "canonicalForm": "HealthTracker",
+        "list": [
+            "x.com.st.d.healthtracker", "healthtracker", "health tracker"
+        ]
+    },
+    {
+        "canonicalForm": "Hub",
+        "list": [
+            "x.com.st.d.hub", "hub"
+        ]
+    },
+    {
+        "canonicalForm": "Humidifier",
+        "list": [
+            "x.com.st.d.humidifier", "humidifier"
+        ]
+    },
+    {
+        "canonicalForm": "IRBlaster",
+        "list": [
+            "x.com.st.d.irblaster", "irblaster", "ir blaster"
+        ]
+    },
+    {
+        "canonicalForm": "Irrigation",
+        "list": [
+            "x.com.st.d.irrigation", "irrigation", "irrigator"
+        ]
+    },
+    {
+        "canonicalForm": "MobilePresence",
+        "list": [
+            "x.com.st.d.mobile.presence", "mobile presence", "mobilepresence"
+        ]
+    },
+    {
+        "canonicalForm": "RemoteController",
+        "list": [
+            "x.com.st.d.remotecontroller", "remote controller", "remotecontroller", "remote"
+        ]
+    },
+    {
+        "canonicalForm": "Scale",
+        "list": [
+            "x.com.st.d.scale", "scale"
+        ]
+    },
+    {
+        "canonicalForm": "ContactSensor",
+        "list": [
+            "x.com.st.d.sensor.contact", "contact", "contactsensor", "contact sensor", "door sensor", "window sensor", "open/close sensor"
+        ]
+    },
+    {
+        "canonicalForm": "LeakSensor",
+        "list": [
+            "x.com.st.d.sensor.moisture", "moisture sensor", "moisture", "leak sensor", "water sensor", "water detector"
+        ]
+    },
+    {
+        "canonicalForm": "MotionSensor",
+        "list": [
+            "x.com.st.d.sensor.motion", "motion", "motion sensor"
+        ]
+    },
+    {
+        "canonicalForm": "MultiFunctionalSensor",
+        "list": [
+            "x.com.st.d.sensor.multifunction", "multifunction sensor", "multisensor", "multi-sensor"
+        ]
+    },
+    {
+        "canonicalForm": "PresenceSensor",
+        "list": [
+            "x.com.st.d.sensor.presence", "presence", "presence sensor"
+        ]
+    },
+    {
+        "canonicalForm": "SmokeDetector",
+        "list": [
+            "x.com.st.d.sensor.smoke", "smoke", "smoke detector"
+        ]
+    },
+    {
+        "canonicalForm": "SetTop",
+        "list": [
+            "x.com.st.d.settop", "set top", "settop"
+        ]
+    },
+    {
+        "canonicalForm": "Siren",
+        "list": [
+            "x.com.st.d.siren", "siren"
+        ]
+    },
+    {
+        "canonicalForm": "SteamCloset",
+        "list": [
+            "x.com.st.d.steamcloset", "steam closet", "steamcloset"
+        ]
+    },
+    {
+        "canonicalForm": "Stove",
+        "list": [
+            "x.com.st.d.stove", "stove", "stove top"
+        ]
+    },
+    {
+        "canonicalForm": "Vent",
+        "list": [
+            "x.com.st.d.vent", "vent"
+        ]
+    },
+    {
+        "canonicalForm": "VoiceAssistance",
+        "list": [
+            "x.com.st.d.voiceassistance", "voice assistance"
+        ]
+    },
+    {
+        "canonicalForm": "WaterHeater",
+        "list": [
+            "x.com.st.d.waterheater", "water heater"
+        ]
+    },
+    {
+        "canonicalForm": "WineCellar",
+        "list": [
+            "x.com.st.d.winecellar", "wine cellar", "wine cabinet", "winecellar"
+        ]
+    }
+]
