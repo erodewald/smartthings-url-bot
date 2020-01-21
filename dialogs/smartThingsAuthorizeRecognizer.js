@@ -23,6 +23,32 @@ class SmartThingsAuthorizeRecognizer {
         return await this.recognizer.recognize(context);
     }
     
+    getRoom(result) {
+        let room;
+        let { entities } = result;
+        let { $instance } = entities;
+
+        if (entities.SmartThings_Entities[0][0] &&
+            entities.SmartThings_Entities[0][0] === 'Room' &&
+            $instance.SmartThings_Entities[0].text) {
+            room = $instance.SmartThings_Entities[0].text;
+        }
+
+        return { room: room };
+    }
+
+    getCapability(result) {
+        let capability, input;
+        let { entities } = result;
+        let { $instance } = entities;
+        if ($instance.SmartThings_Capability[0]) {
+            input = $instance.SmartThings_Capability[0].text
+        }
+        if (entities.SmartThings_Capability[0]) {
+            capability = entities.SmartThings_Capability[0];
+        }
+        return { text: input, capability: capability };
+    }
 }
 
 module.exports.SmartThingsAuthorizeRecognizer = SmartThingsAuthorizeRecognizer;
