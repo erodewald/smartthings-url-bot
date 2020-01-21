@@ -14,14 +14,18 @@ const { ApplicationInsightsTelemetryClient, ApplicationInsightsWebserverMiddlewa
 const { BotFrameworkAdapter, ConversationState, InputHints, MemoryStorage, UserState } = require('botbuilder');
 
 const { SmartThingsAuthorizeRecognizer } = require('./dialogs/smartThingsAuthorizeRecognizer');
+const { QnAMaker } = require('botbuilder-ai');
 
 // This bot's main dialog.
+const { DispatchBot } = require('./bots/dispatchBot');
 const { DialogBot } = require('./bots/dialogBot');
 const { MainDialog } = require('./dialogs/mainDialog');
 
-// the bot's dialog
+// the bot's dialogs
 const { AuthorizeDialog } = require('./dialogs/authorizeDialog');
+const { QueryDialog } = require('./dialogs/queryDialog');
 const AUTHORIZE_DIALOG = 'authorizeDialog';
+const QUERY_DIALOG = 'queryDialog';
 
 // Note: Ensure you have a .env file and include LuisAppId, LuisAPIKey and LuisAPIHostName.
 const ENV_FILE = path.join(__dirname, '.env');
@@ -75,12 +79,15 @@ const luisConfig = { applicationId: LuisAppId, endpointKey: LuisAPIKey, endpoint
 
 const luisRecognizer = new SmartThingsAuthorizeRecognizer(luisConfig);
 
-const appInsightsClient = new ApplicationInsightsTelemetryClient(ApplicationInsightsInstrumentationKey);
+
+// const appInsightsClient = new ApplicationInsightsTelemetryClient(ApplicationInsightsInstrumentationKey);
 
 // Create the main dialog.
-const authorizeDialog = new AuthorizeDialog(AUTHORIZE_DIALOG, appInsightsClient);
-const dialog = new MainDialog(luisRecognizer, authorizeDialog, appInsightsClient);
-const bot = new DialogBot(conversationState, userState, dialog);
+// const authorizeDialog = new AuthorizeDialog(AUTHORIZE_DIALOG, appInsightsClient);
+// const queryDialog = new QueryDialog(QUERY_DIALOG, appInsightsClient);
+// const dialog = new MainDialog(luisRecognizer, authorizeDialog, queryDialog, appInsightsClient);
+// const bot = new DialogBot(conversationState, userState, dialog);
+const bot = new DispatchBot();
 
 // Create HTTP server
 const server = restify.createServer();
