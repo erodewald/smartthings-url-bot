@@ -9,7 +9,7 @@ const { ComponentDialog, DialogSet, DialogTurnStatus, TextPrompt, WaterfallDialo
 const MAIN_WATERFALL_DIALOG = 'mainWaterfallDialog';
 
 class MainDialog extends ComponentDialog {
-    constructor(luisRecognizer, authorizeDialog, insightsClient) {
+    constructor(luisRecognizer, authorizeDialog, queryDialog, insightsClient) {
         super('MainDialog');
         
         // Add ApplicationInsights as the telemetry client
@@ -19,11 +19,13 @@ class MainDialog extends ComponentDialog {
         this.luisRecognizer = luisRecognizer;
 
         if (!authorizeDialog) throw new Error('[MainDialog]: Missing parameter \'authorizeDialog\' is required');
+        if (!queryDialog) throw new Error('[MainDialog]: Missing parameter \'queryDialog\' is required');
 
         // Define the main dialog and its related components.
         // This is a sample "book a flight" dialog.
         this.addDialog(new TextPrompt('TextPrompt'))
             .addDialog(authorizeDialog)
+            .addDialog(queryDialog)
             .addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
                 this.introStep.bind(this),
                 this.actStep.bind(this),
@@ -68,15 +70,15 @@ class MainDialog extends ComponentDialog {
     }
 
     /**
-     * Second step in the waterfall.  This will use LUIS to attempt to extract the origin, destination and travel dates.
-     * Then, it hands off to the bookingDialog child dialog to collect any remaining details.
+     * Second step in the waterfall.  This will use LUIS to attempt to extract data.
+     * Then, it hands off to the authorizeDialog child dialog to collect any remaining details.
      */
     async actStep(stepContext) {
         const authorizeDetails = {};
 
         if (!this.luisRecognizer.isConfigured) {
             // LUIS is not configured, we just run the AuthorizeDialog path.
-            return await stepContext.beginDialog('authorizeDialog', authorizeDetails);
+            return await stepContext.beginDialog('authorizeDialog', {});
         }
 
         // Call LUIS and gather any potential booking details. (Note the TurnContext has the response to the prompt)
@@ -84,8 +86,24 @@ class MainDialog extends ComponentDialog {
         switch (LuisRecognizer.topIntent(luisResult)) {
 
             case 'SmartThings_Authorize': {
-                console.log('LUIS extracted these details:', JSON.stringify(authorizeDetails));
                 return await stepContext.beginDialog('authorizeDialog', authorizeDetails);
+            }
+
+            case 'SmartThings_QueryState': {
+                const queryDetails = {};
+                // Extract the values for the composite entities from the LUIS result.
+                const roomEntities = this.luisRecognizer.getRoom(luisResult);
+                const capabilityEntities = this.luisRecognizer.getCapability(luisResult);
+
+                queryDetails.room = roomEntities.room;
+                queryDetails.capability = capabilityEntities.capability;
+                console.log('LUIS extracted these details:', JSON.stringify(queryDetails));
+
+                return await stepContext.beginDialog('queryDialog', queryDetails);
+            }
+
+            case 'SmartThings_CheckOccupancy': {
+                return await stepContext.beginDialog('checkOccupancyDialog', authorizeDetails);
             }
 
             default: {
