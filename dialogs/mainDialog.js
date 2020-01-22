@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-const axios = require('axios');
+const axios = require('axios').default;
 const { MessageFactory, InputHints } = require('botbuilder');
 const { LuisRecognizer } = require('botbuilder-ai');
 const { ComponentDialog, DialogSet, DialogTurnStatus, TextPrompt, WaterfallDialog } = require('botbuilder-dialogs');
