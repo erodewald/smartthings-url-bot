@@ -74,20 +74,21 @@ const userState = new UserState(memoryStorage);
 
 
 // If configured, pass in the SmartThingsRecognizer.  (Defining it externally allows it to be mocked for tests)
-const { LuisAppId, LuisAPIKey, LuisAPIHostName, ApplicationInsightsInstrumentationKey } = process.env;
+const { LuisAppId, LuisAPIKey, LuisAPIHostName, ApplicationInsightsInstrumentationKey, QnAAppInsightsInstrumentationKey } = process.env;
 const luisConfig = { applicationId: LuisAppId, endpointKey: LuisAPIKey, endpoint: `https://${ LuisAPIHostName }` };
 
 const luisRecognizer = new SmartThingsAuthorizeRecognizer(luisConfig);
 
 
 // const appInsightsClient = new ApplicationInsightsTelemetryClient(ApplicationInsightsInstrumentationKey);
+const qnaAppInsightsClient = new ApplicationInsightsTelemetryClient(QnAAppInsightsInstrumentationKey);
 
 // Create the main dialog.
 // const authorizeDialog = new AuthorizeDialog(AUTHORIZE_DIALOG, appInsightsClient);
 // const queryDialog = new QueryDialog(QUERY_DIALOG, appInsightsClient);
 // const dialog = new MainDialog(luisRecognizer, authorizeDialog, queryDialog, appInsightsClient);
 // const bot = new DialogBot(conversationState, userState, dialog);
-const bot = new DispatchBot();
+const bot = new DispatchBot(qnaAppInsightsClient);
 
 // Create HTTP server
 const server = restify.createServer();
